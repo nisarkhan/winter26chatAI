@@ -1,14 +1,14 @@
 ---
 title: Welcome to Nisar’s AgentBox
 description: Your smart search for Salesforce Winter ’26 updates
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+template: splash
 hero:
   tagline: Chat here to discover what’s new in Salesforce Winter ’26.
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Ask About Winter ’26
+      link: "#chatbot"
       icon: right-arrow
     - text: Read the Starlight docs
       link: https://starlight.astro.build
@@ -17,24 +17,37 @@ hero:
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import ChatWidget from '../../components/ChatWidget.astro';
+
+## Welcome
+
+This site helps answer questions about the Salesforce Winter ’26 release notes using your Agentforce agent.
+
+## Try asking things like
+
+- What is new in Flow in Winter ’26?
+- What changed for Apex in Winter ’26?
+- What are the most important Winter ’26 highlights?
+- Are there any Agentforce updates in Winter ’26?
+- What setup or limitation details are mentioned in the release notes?
 
 ## Next steps
 
 <CardGrid stagger>
+	<Card title="Ask release-note questions" icon="chat">
+		Use the chatbot below to ask questions grounded in the Salesforce Winter ’26 release notes.
+	</Card>
 	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+		Edit `src/content/docs/index.mdx` to customize this landing page.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Add documentation" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create more pages.
 	</Card>
 	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+		Edit your site navigation and settings in `astro.config.mjs`.
 	</Card>
 </CardGrid>
+
+<div id="chatbot"></div>
+
+<ChatWidget />
