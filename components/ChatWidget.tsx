@@ -31,8 +31,8 @@ export default function ChatWidget() {
                 embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
                 embeddedservice_bootstrap.init(
                     '00DgK00000KuA61',
-                    'soa313_web_message_channel',
-                    'https://orgfarm-0e9cabbd06-dev-ed.develop.my.site.com/ESWsoa313webmessagecha1773268998912',
+                    'release_notes',
+                    'https://orgfarm-0e9cabbd06-dev-ed.develop.my.site.com/ESWreleasenotes1773526048010',
                     {
                         scrt2URL: 'https://orgfarm-0e9cabbd06-dev-ed.develop.my.salesforce-scrt.com'
                     }
@@ -46,7 +46,7 @@ export default function ChatWidget() {
       />
 
       <Script
-        src="https://orgfarm-0e9cabbd06-dev-ed.develop.my.site.com/ESWsoa313webmessagecha1773268998912/assets/js/bootstrap.min.js"
+        src="https://orgfarm-0e9cabbd06-dev-ed.develop.my.site.com/ESWreleasenotes1773526048010/assets/js/bootstrap.min.js"
         strategy="afterInteractive"
         onLoad={() => {
           if (typeof window !== 'undefined' && typeof window.initEmbeddedMessaging === 'function') {
