@@ -1,0 +1,30 @@
+<div id="salesforce-chat-widget"></div>
+
+<script is:inline>
+  function initEmbeddedMessaging() {
+    try {
+      if (window.embeddedservice_bootstrap?.isInitialized) return;
+
+      embeddedservice_bootstrap.settings.language = 'en_US';
+
+      embeddedservice_bootstrap.init(
+        '00DgK00000KuA61',
+        'release_notes',
+        'https://orgfarm-0e9cabbd06-dev-ed.develop.my.site.com/ESWreleasenotes1773526048010',
+        {
+          scrt2URL: 'https://orgfarm-0e9cabbd06-dev-ed.develop.my.salesforce-scrt.com'
+        }
+      );
+    } catch (err) {
+      console.error('Error loading Embedded Messaging: ', err);
+    }
+  }
+
+  window.initEmbeddedMessaging = initEmbeddedMessaging;
+</script>
+
+<script
+  is:inline
+  src="https://orgfarm-0e9cabbd06-dev-ed.develop.my.site.com/ESWreleasenotes1773526048010/assets/js/bootstrap.min.js"
+  onload="initEmbeddedMessaging()"
+></script>
